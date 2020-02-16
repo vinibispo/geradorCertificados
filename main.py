@@ -7,5 +7,5 @@ def gera_certificado(nome_pessoa):
     caminho_imagem = "./fonts/SourceSerifPro-Bold.ttf"
     fonte_certificado = ImageFont.truetype(caminho_imagem, 34, encoding="unic")
     imagem_certificado_desenho.text((22, 243), nome_pessoa, font=fonte_certificado, fill=(115,111,72))
-    imagem_ce
-# gera_certificado()
+    imagem_certificado.save("./images/" +certificado_pessoa, "PNG", resolution=100.0)
+    return certificado_pessoa
