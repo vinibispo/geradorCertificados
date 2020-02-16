@@ -3,7 +3,7 @@ In this repository contains a application made using python that creates certifi
 ## Tasks
 ### Main 
 - [X] Create files main.py and README.md
-- [ ] Define tasks
+- [X] Define tasks
 - [ ] Create executable file for Windows and Linux
 
 ### Canva
