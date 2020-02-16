@@ -11,5 +11,5 @@ In this repository contains a application made using python that creates certifi
 - [X] Create certified model
 
 ### Image manipulation
- - [ ] Learn to use Pillow
- - [ ] Create function to write in images
+ - [X] Learn to use Pillow
+ - [X] Create function to write in images

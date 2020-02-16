@@ -14,4 +14,9 @@ def gera_certificado(nome_completo_pessoa):
     imagem_certificado.save("images/" +certificado_pessoa, "PNG", resolution=100.0)
     return certificado_pessoa
 def pega_dado_excel():
-    planilha_nomes = open_workbook
+    nome_arquivo = "pessoas.xlsx"
+    planilha_nomes = open_workbook(nome_arquivo)
+    folha_planilha = planilha_nomes.sheet_by_index(0)
+    for i in range(1, folha_planilha.nrows):
+        pessoa_nome = folha_planilha.row_values(i)[1]
+        gera_certificado(pessoa_nome)
