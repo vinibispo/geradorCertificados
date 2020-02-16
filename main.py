@@ -18,5 +18,6 @@ def pega_dado_excel():
     planilha_nomes = open_workbook(nome_arquivo)
     folha_planilha = planilha_nomes.sheet_by_index(0)
     for i in range(1, folha_planilha.nrows):
-        pessoa_nome = folha_planilha.row_values(i)[1]
+        pessoa_nome = folha_planilha.row_values(i)[0]
         gera_certificado(pessoa_nome)
+pega_dado_excel()
