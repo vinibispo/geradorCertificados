@@ -1,8 +1,8 @@
 from PIL import Image, ImageFont, ImageDraw
+from xlrd import open_workbook
 def gera_certificado(nome_completo_pessoa):
     certificado = 'certificado'
-    nome_pessoa = nome_completo_pessoa.split(' ')[0].lower()
-    certificado_pessoa = certificado +nome_pessoa+ ".png"
+    certificado_pessoa = certificado +nome_completo_pessoa.replace(" ", "").lower()+ ".png"
     certificado += ".png"
     imagem_certificado = Image.open(certificado)
     imagem_certificado_desenho = ImageDraw.Draw(imagem_certificado)
@@ -13,4 +13,5 @@ def gera_certificado(nome_completo_pessoa):
     imagem_certificado_desenho.text(((imagem_certificado.size[0] - text_size[0])/ 2, 243), nome_completo_pessoa.upper(), font=fonte_certificado, fill=(115,111,72))
     imagem_certificado.save("images/" +certificado_pessoa, "PNG", resolution=100.0)
     return certificado_pessoa
-print(gera_certificado())
+def pega_dado_excel():
+    planilha_nomes = open_workbook
